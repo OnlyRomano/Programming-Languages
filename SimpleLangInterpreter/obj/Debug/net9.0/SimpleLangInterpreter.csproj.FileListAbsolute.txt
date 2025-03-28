@@ -1,0 +1,14 @@
+C:\Users\Mark\Downloads\VsCode\test\SimpleLangInterpreter\bin\Debug\net9.0\SimpleLangInterpreter.exe
+C:\Users\Mark\Downloads\VsCode\test\SimpleLangInterpreter\bin\Debug\net9.0\SimpleLangInterpreter.deps.json
+C:\Users\Mark\Downloads\VsCode\test\SimpleLangInterpreter\bin\Debug\net9.0\SimpleLangInterpreter.runtimeconfig.json
+C:\Users\Mark\Downloads\VsCode\test\SimpleLangInterpreter\bin\Debug\net9.0\SimpleLangInterpreter.dll
+C:\Users\Mark\Downloads\VsCode\test\SimpleLangInterpreter\bin\Debug\net9.0\SimpleLangInterpreter.pdb
+C:\Users\Mark\Downloads\VsCode\test\SimpleLangInterpreter\obj\Debug\net9.0\SimpleLangInterpreter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mark\Downloads\VsCode\test\SimpleLangInterpreter\obj\Debug\net9.0\SimpleLangInterpreter.AssemblyInfoInputs.cache
+C:\Users\Mark\Downloads\VsCode\test\SimpleLangInterpreter\obj\Debug\net9.0\SimpleLangInterpreter.AssemblyInfo.cs
+C:\Users\Mark\Downloads\VsCode\test\SimpleLangInterpreter\obj\Debug\net9.0\SimpleLangInterpreter.csproj.CoreCompileInputs.cache
+C:\Users\Mark\Downloads\VsCode\test\SimpleLangInterpreter\obj\Debug\net9.0\SimpleLangInterpreter.dll
+C:\Users\Mark\Downloads\VsCode\test\SimpleLangInterpreter\obj\Debug\net9.0\refint\SimpleLangInterpreter.dll
+C:\Users\Mark\Downloads\VsCode\test\SimpleLangInterpreter\obj\Debug\net9.0\SimpleLangInterpreter.pdb
+C:\Users\Mark\Downloads\VsCode\test\SimpleLangInterpreter\obj\Debug\net9.0\SimpleLangInterpreter.genruntimeconfig.cache
+C:\Users\Mark\Downloads\VsCode\test\SimpleLangInterpreter\obj\Debug\net9.0\ref\SimpleLangInterpreter.dll
