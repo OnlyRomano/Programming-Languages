@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mark\\Downloads\\VsCode\\test\\SimpleLangInterpreter\\SimpleLangInterpreter.csproj",
+      "projectUniqueName": "C:\\Users\\Mark\\Downloads\\VsCode\\Program_Languages\\SimpleLangInterpreter\\SimpleLangInterpreter.csproj",
       "projectName": "SimpleLangInterpreter",
-      "projectPath": "C:\\Users\\Mark\\Downloads\\VsCode\\test\\SimpleLangInterpreter\\SimpleLangInterpreter.csproj",
+      "projectPath": "C:\\Users\\Mark\\Downloads\\VsCode\\Program_Languages\\SimpleLangInterpreter\\SimpleLangInterpreter.csproj",
       "packagesPath": "C:\\Users\\Mark\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mark\\Downloads\\VsCode\\test\\SimpleLangInterpreter\\obj\\",
+      "outputPath": "C:\\Users\\Mark\\Downloads\\VsCode\\Program_Languages\\SimpleLangInterpreter\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

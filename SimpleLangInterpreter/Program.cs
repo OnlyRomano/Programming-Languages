@@ -41,11 +41,12 @@ class SimpleLangInterpreter
         if (line.StartsWith("PRINT "))
         {
             string content = line.Substring(6).Trim();
-            Console.WriteLine(EvaluateExpression(content));
+            object? result = EvaluateExpression(content);
+            Console.WriteLine(result?.ToString() ?? "null");
         }
         else if (Regex.IsMatch(line, "^VAR [a-zA-Z_][a-zA-Z0-9_]* = .+$"))
         {
-            string[] parts = line.Substring(4).Split(new[] { " = " }, StringSplitOptions.None);
+            string[] parts = line.Substring(4).Split(new[] { " = " }, 2, StringSplitOptions.None);
             if (parts.Length == 2)
             {
                 string varName = parts[0].Trim();
@@ -62,8 +63,23 @@ class SimpleLangInterpreter
                     Console.WriteLine("Syntax Error: Invalid identifier name!");
                     return;
                 }
-                
-                variables[varName] = EvaluateExpression(value) ?? "null";
+
+                // Handle string literals directly
+                if (value.StartsWith("\"") && value.EndsWith("\"") || value.StartsWith("'") && value.EndsWith("'"))
+                {
+                    string content = value.Substring(1, value.Length - 2);
+                    variables[varName] = content.Replace("\\n", "\n")
+                                             .Replace("\\t", "\t")
+                                             .Replace("\\r", "\r")
+                                             .Replace("\\\"", "\"")
+                                             .Replace("\\'", "'")
+                                             .Replace("\\\\", "\\");
+                }
+                else
+                {
+                    object? evaluatedValue = EvaluateExpression(value);
+                    variables[varName] = evaluatedValue ?? "null";
+                }
             }
         }
         else
@@ -76,20 +92,30 @@ class SimpleLangInterpreter
     {
         try
         {
+            // First check if it's a variable reference
+            if (variables.ContainsKey(expression))
+            {
+                return variables[expression];
+            }
+
+            // Handle variable substitution in expressions
             foreach (var variable in variables)
             {
-                expression = expression.Replace(variable.Key, variable.Value.ToString() ?? "null");
+                expression = Regex.Replace(expression, $"\\b{variable.Key}\\b", variable.Value?.ToString() ?? "null");
             }
             
             if (Regex.IsMatch(expression, "^\\d+$")) return int.Parse(expression);
             if (Regex.IsMatch(expression, "^\\d+\\.\\d+$")) return float.Parse(expression);
-            if (Regex.IsMatch(expression, "^'(.*)'$") || Regex.IsMatch(expression, "^\"(.*)\"$"))
-                return expression.Substring(1, expression.Length - 2)
-                                 .Replace("\\", "\\\\")
-                                 .Replace("\\n", "\n")
-                                 .Replace("\\t", "\t")
-                                 .Replace("\\\"", "\"")
-                                 .Replace("\\'", "'");
+            if (Regex.IsMatch(expression, "^'(.*?)'$") || Regex.IsMatch(expression, "^\"(.*?)\"$"))
+            {
+                string content = expression.Substring(1, expression.Length - 2);
+                return content.Replace("\\n", "\n")
+                            .Replace("\\t", "\t")
+                            .Replace("\\r", "\r")
+                            .Replace("\\\"", "\"")
+                            .Replace("\\'", "'")
+                            .Replace("\\\\", "\\");
+            }
             if (expression == "true" || expression == "false") return bool.Parse(expression);
             if (expression == "null" || expression == "undefined") return "null";
             
