@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SimpleLangInterpreter")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+da3dcb559b5ca090aee9f11c33f9d486892a3a88")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3dfbcd48272198f9c3194f3a7a4a0bd7831f1391")]
 [assembly: System.Reflection.AssemblyProductAttribute("SimpleLangInterpreter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SimpleLangInterpreter")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
